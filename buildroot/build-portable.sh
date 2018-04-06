@@ -171,7 +171,9 @@ CreatePackage()
 
   ARCH_PKG_PATH=$PKG_TYPE_DIR/$ARCH_PKG_BASE.tar.gz
   tar czvf $ARCH_PKG_PATH -C ${TMP_DIR} airdcpp-webclient
-
+  
+  cp $ARCH_PKG_PATH $PKG_TYPE_DIR/airdcpp_latest_${BRANCH}_webui-${ARCH}-bit_portable.tar.gz
+  
   DeleteTmpDir
 
   echo "${bold}Package was saved to ${ARCH_PKG_PATH}${normal}"
